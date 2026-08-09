@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Be4Au</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .form-field { margin-bottom: 20px; }
+  .form-field label { display:block; font-size:.85rem; font-weight:600; color:var(--navy); margin-bottom:6px; }
+  .form-field input, .form-field select, .form-field textarea {
+    width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:8px;
+    font-family: var(--body); font-size:.95rem; background:var(--white); color:var(--ink);
+  }
+  .form-field textarea { resize: vertical; min-height:110px; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:600px){ .form-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Be4Au logo">
+      <span>Be<b>4</b>Au</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="insurance.html">Insurance &amp; Fees</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-outline-navy" style="padding:10px 18px;font-size:.85rem;">Client Portal</a>
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;font-size:.85rem;">Book a Consult</a>
+    </div>
+    <button class="nav-toggle">Menu</button>
+  </div>
+</nav>
+
+<header class="section-warm" style="padding:80px 0 56px;">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1 style="max-width:18ch;">Let's see if we're a good fit.</h1>
+    <p class="lede">Fill out the form below to request a free 15-minute consultation, or reach out with any questions before getting started.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="grid-2" style="align-items:flex-start;">
+
+      <form class="card" onsubmit="event.preventDefault(); document.getElementById('formConfirm').style.display='block'; this.style.display='none';">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" required>
+          </div>
+          <div class="form-field">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="state">Which state are you located in?</label>
+          <select id="state" required>
+            <option value="">Select a state</option>
+            <option>Pennsylvania</option>
+            <option>Texas</option>
+            <option>New Jersey</option>
+            <option>Michigan</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="interest">What are you interested in?</label>
+          <select id="interest">
+            <option>Individual Therapy</option>
+            <option>Clinical Supervision</option>
+            <option>School / Youth Consultation</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Anything you'd like to share before we connect?</label>
+          <textarea id="message" placeholder="Optional"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Request a consultation</button>
+      </form>
+
+      <div id="formConfirm" class="card" style="display:none; background: var(--navy); color:#fff;">
+        <h3 style="color:#fff;">Thank you.</h3>
+        <p style="color:rgba(255,255,255,.8);">Your request has been noted. Malanna will follow up by email within 1–2 business days to schedule your free consultation.</p>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:20px;">
+          <h3>Prefer to reach out directly?</h3>
+          <p style="margin-bottom:4px;"><strong>Email:</strong> hello@be4au.com</p>
+          <p style="margin-bottom:0;"><strong>Client Portal:</strong> existing clients can message, reschedule, and view documents directly through the portal.</p>
+          <a href="#" class="btn btn-outline-navy mt-lg" style="padding:10px 18px;font-size:.85rem;">Go to Client Portal</a>
+        </div>
+        <div class="card">
+          <h3>Service area</h3>
+          <p>Telehealth sessions are available to clients physically located in Pennsylvania, Texas, New Jersey, or Michigan at the time of their appointment.</p>
+          <div class="badge-row mt-lg">
+            <span class="pill">PA</span>
+            <span class="pill">TX</span>
+            <span class="pill">NJ</span>
+            <span class="pill">MI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:16px;">
+          <img src="assets/logo.png" alt="Be4Au logo" style="height:40px;width:40px;">
+          <span style="color:#fff;">Be<b style="color:var(--gold-light)">4</b>Au</span>
+        </div>
+        <p style="max-width:32ch;font-size:.88rem;">To be for you — where your best continues to rise. Telehealth therapy across PA, TX, NJ &amp; MI.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="insurance.html">Insurance &amp; Fees</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h4>Client</h4>
+        <a href="contact.html">Contact</a>
+        <a href="#">Client Portal</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <div>
+        <h4>Practice</h4>
+        <a href="#">Be4Au, a d/b/a of 4LH Limited</a>
+        <a href="#">Licensed in PA · TX · NJ · MI</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Be4Au / 4LH Limited. All rights reserved.</span>
+      <span>Telehealth private practice — Malanna Simmons, LCSW</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>
